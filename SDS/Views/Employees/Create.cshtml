@@ -1,0 +1,75 @@
+﻿@model SDS.ViewModel.AddEmployeeViewModel
+
+@{
+    ViewBag.Title = "Create Employee";
+}
+
+<h2>Create Employee</h2>
+
+<hr />
+
+<div class="row">
+
+    <div class="col-md-8">
+
+        <form method="post" id="createEmployeeForm">
+            <div class="text-danger"></div>
+            <div class="form-group row">
+                @Html.LabelFor(model => model.EmpNo, new { @class = "col-sm-3 col-form-label" })
+                <div class="col-sm-9 mb-3">
+                    @Html.TextBoxFor(model => model.EmpNo, new { @class = "form-control", maxlength = 6, placeholder = "XYZ123" })
+                    @Html.ValidationMessageFor(model => model.EmpNo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group row">
+                @Html.LabelFor(model => model.FirstName, new { @class = "col-sm-3 col-form-label" })
+                <div class="col-sm-9 mb-3">
+                    @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", maxlength = 15, placeholder = "Juan" })
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group row">
+                @Html.LabelFor(model => model.LastName, new { @class = "col-sm-3 col-form-label" })
+                <div class="col-sm-9 mb-3">
+                    @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", maxlength = 15, placeholder = "Dela Cruz" })
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group row">
+                @Html.LabelFor(model => model.BirthDate, new { @class = "col-sm-3 col-form-label" })
+                <div class="col-sm-9 mb-3">
+                    @Html.TextBoxFor(model => model.BirthDate, new { @class = "form-control", type = "date" })
+                    @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group row">
+                @Html.LabelFor(model => model.EmailAddress, new { @class = "col-sm-3 col-form-label" })
+                <div class="col-sm-9 mb-3">
+                    @Html.TextBoxFor(model => model.EmailAddress, new { @class = "form-control", placeholder = "juandelacruz@example.com" })
+                    @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group row">
+                @Html.LabelFor(model => model.ContactNo, new { @class = "col-sm-3 col-form-label" })
+                <div class="col-sm-9 mb-3">
+                    @*@Html.TextBoxFor(model => model.ContactNo, new { @class = "form-control", maxlength = 11 })*@
+                    @Html.TextBoxFor(model => model.ContactNo, new { @class = "form-control", maxlength = 11, placeholder = "09123456789", })
+                    @Html.ValidationMessageFor(model => model.ContactNo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-9  mt-1 offset-sm-3">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+ 
