@@ -34,4 +34,4 @@ The project uses a single table called `Employee` with the following fields:
 
 ### ORM (Object-Relational Mapping)
 
-#### I used Entity Framework
+#### Entity Framework
